@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.coverage
+dist/
+build/
+*.egg-info/
+sample_output/output.json
+sample_output/output.csv
+sample_output/summary.txt
+sample_output/run.log

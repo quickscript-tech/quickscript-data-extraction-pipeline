@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Sample Product Grid</title>
+</head>
+<body>
+  <main>
+    <h1>Demo Store</h1>
+
+    <section id="products">
+      <!-- 12 valid -->
+      <article class="product-card" data-id="p001" data-category="Electronics">
+        <h2 class="product-name">USB-C Hub 7-in-1</h2>
+        <span class="price">$39.99</span>
+        <span class="rating">4.6</span>
+        <span class="reviews">128 reviews</span>
+        <span class="stock">In stock</span>
+        <a class="product-link" href="/products/usb-c-hub-7in1">View</a>
+      </article>
+
+      <article class="product-card" data-id="p002" data-category="Electronics">
+        <h2 class="product-name">Wireless Mouse</h2>
+        <span class="price">$19.99</span>
+        <span class="rating">4.2</span>
+        <span class="reviews">540 reviews</span>
+        <span class="stock">In stock</span>
+        <a class="product-link" href="/products/wireless-mouse">View</a>
+      </article>
+
+      <article class="product-card" data-id="p003" data-category="Books">
+        <h2 class="product-name">Python Automation Patterns</h2>
+        <span class="price">€24.50</span>
+        <span class="rating">4.8</span>
+        <span class="reviews">87 reviews</span>
+        <span class="stock">In stock</span>
+        <a class="product-link" href="/products/python-automation-patterns">View</a>
+      </article>
+
+      <article class="product-card" data-id="p004" data-category="Home">
+        <h2 class="product-name">Stainless Steel Water Bottle</h2>
+        <span class="price">€14.90</span>
+        <span class="rating">4.4</span>
+        <span class="reviews">211 reviews</span>
+        <span class="stock">Out of stock</span>
+        <a class="product-link" href="/products/water-bottle-steel">View</a>
+      </article>
+
+      <article class="product-card" data-id="p005" data-category="Toys">
+        <h2 class="product-name">Wooden Puzzle Set</h2>
+        <span class="price">$12.49</span>
+        <span class="rating">4.1</span>
+        <span class="reviews">63 reviews</span>
+        <span class="stock">In stock</span>
+        <a class="product-link" href="/products/wooden-puzzle-set">View</a>
+      </article>
+
+      <article class="product-card" data-id="p006" data-category="Home">
+        <h2 class="product-name">LED Desk Lamp</h2>
+        <span class="price">$29.95</span>
+        <span class="rating">4.0</span>
+        <span class="reviews">19 reviews</span>
+        <span class="stock">In stock</span>
+        <a class="product-link" href="/products/led-desk-lamp">View</a>
+      </article>
+
+      <article class="product-card" data-id="p007" data-category="Electronics">
+        <h2 class="product-name">Portable SSD 1TB</h2>
+        <span class="price">$89.00</span>
+        <span class="rating">4.7</span>
+        <span class="reviews">301 reviews</span>
+        <span class="stock">In stock</span>
+        <a class="product-link" href="/products/portable-ssd-1tb">View</a>
+      </article>
+
+      <article class="product-card" data-id="p008" data-category="Books">
+        <h2 class="product-name">Clean CLI Design</h2>
+        <span class="price">$21.00</span>
+        <span class="rating">3.9</span>
+        <span class="reviews">44 reviews</span>
+        <span class="stock">In stock</span>
+        <a class="product-link" href="/products/clean-cli-design">View</a>
+      </article>
+
+      <article class="product-card" data-id="p009" data-category="Toys">
+        <h2 class="product-name">Mini RC Car</h2>
+        <span class="price">€34.99</span>
+        <span class="rating">4.3</span>
+        <span class="reviews">156 reviews</span>
+        <span class="stock">Out of stock</span>
+        <a class="product-link" href="/products/mini-rc-car">View</a>
+      </article>
+
+      <article class="product-card" data-id="p010" data-category="Home">
+        <h2 class="product-name">Microfiber Cleaning Cloths (10-pack)</h2>
+        <span class="price">$9.99</span>
+        <span class="rating">4.5</span>
+        <span class="reviews">902 reviews</span>
+        <span class="stock">In stock</span>
+        <a class="product-link" href="/products/microfiber-cloths-10">View</a>
+      </article>
+
+      <article class="product-card" data-id="p011" data-category="Electronics">
+        <h2 class="product-name">Mechanical Keyboard (TKL)</h2>
+        <span class="price">$74.50</span>
+        <span class="rating">4.6</span>
+        <span class="reviews">77 reviews</span>
+        <span class="stock">In stock</span>
+        <a class="product-link" href="/products/mechanical-keyboard-tkl">View</a>
+      </article>
+
+      <article class="product-card" data-id="p012" data-category="Books">
+        <h2 class="product-name">Data Validation for Humans</h2>
+        <span class="price">€18.00</span>
+        <span class="rating">4.9</span>
+        <span class="reviews">5 reviews</span>
+        <span class="stock">In stock</span>
+        <a class="product-link" href="/products/data-validation-for-humans">View</a>
+      </article>
+
+      <!-- 2 invalid (to demonstrate errors list + CSV exclusion) -->
+      <article class="product-card" data-id="p013" data-category="Electronics">
+        <h2 class="product-name">Broken Price Item</h2>
+        <span class="price">$0.00</span>
+        <span class="rating">4.0</span>
+        <span class="reviews">10 reviews</span>
+        <span class="stock">In stock</span>
+        <a class="product-link" href="/products/broken-price-item">View</a>
+      </article>
+
+      <article class="product-card" data-id="p014" data-category="Home">
+        <h2 class="product-name"></h2>
+        <span class="price">€11.00</span>
+        <span class="rating">6.0</span>
+        <span class="reviews">-1 reviews</span>
+        <span class="stock">In stock</span>
+        <a class="product-link" href="">View</a>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

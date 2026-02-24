@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "qdep"
 version = "0.1.0"
-description = "Offline HTML data extraction mini-popeline (CLI) for portfolio use."
+description = "Offline HTML data extraction mini-pipeline (CLI) for portfolio use."
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = [

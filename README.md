@@ -14,7 +14,7 @@ This is built as a small but realistic “client deliverable” style tool: dete
 ```bash
 # from repo root
 sudo apt-get update
-sudo apt-get install -y python3-venv
+sudo apt-get install -y python3 python3-pip python3-venv git
 
 python3 -m venv .venv
 source .venv/bin/activate
@@ -23,7 +23,7 @@ python -m pip install --upgrade pip
 # install dependencies + package (editable)
 python -m pip install -e .
 
-# run the pipeline
+# run the pipeline (writes to sample_output/)
 python -m qdep --input fixtures/sample_page.html --outdir sample_output
 
 # Outputs
@@ -51,3 +51,6 @@ sample_output/run.log      (start/end, paths, counts, brief validation errors)
 2. sample_output/summary.txt opened (clear stats + category breakdown).
 3. A snippet of sample_output/output.json showing items and errors.
 4. sample_output/run.log showing start/end + brief validation errors.
+
+# Tests
+python -m unittest discover -s tests -v

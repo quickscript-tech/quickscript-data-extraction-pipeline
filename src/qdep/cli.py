@@ -64,7 +64,7 @@ def run_pipeline(input_path: Path, outdir: Path, realtime: bool) -> tuple[int, i
     summary_path = outdir / "summary.txt"
 
     meta = {
-        "input_path": str(input_path),
+        "input_path": input_path.name,
         "input_sha256": input_hash,
         "timestamp_utc": ts,
         "deterministic": (not realtime),
@@ -85,14 +85,16 @@ def run_pipeline(input_path: Path, outdir: Path, realtime: bool) -> tuple[int, i
 
 def main(argv: list[str] | None = None) -> int:
     ns = parse_args(argv)
-    input_path = Path(ns.input).resolve()
-    outdir = Path(ns.outdir).resolve()
+    input_path = Path(ns.input)
+    outdir = Path(ns.outdir)
 
     if not input_path.exists():
         raise SystemExit(f"Input file not found: {input_path}")
 
-    run_pipeline(input_path=input_path, outdir=outdir, realtime=bool(ns.realtime))
-
-    # Clean deterministic terminal output (no timestamps)
-    print(f"OK extracted={len(extract_cards(load_html(input_path)))} outdir={outdir}")
+    extracted, valid, invalid = run_pipeline(
+	input_path=input_path,
+	outdir=outdir,
+	realtime=bool(ns.realtime),
+    )
+    print(f"OK extracted={extracted} valid={valid} invalid={invalid} outdir={outdir.name}")
     return 0

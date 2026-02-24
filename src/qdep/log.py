@@ -24,8 +24,8 @@ class RunLogger:
     def start(self, input_path: Path, outdir: Path) -> None:
         self.start_ts = utc_now(self.realtime)
         self.lines.append(f"start_utc={self.start_ts.isoformat().replace('+00:00', 'Z')}")
-        self.lines.append(f"input={str(input_path)}")
-        self.lines.append(f"outdir={str(outdir)}")
+        self.lines.append(f"input={input_path.name}")
+        self.lines.append(f"outdir={outdir.name}")
 
     def info(self, msg: str) -> None:
         self.lines.append(f"info={msg}")

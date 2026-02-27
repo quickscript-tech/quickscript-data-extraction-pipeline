@@ -25,14 +25,15 @@ python -m pip install -e .
 
 # run the pipeline (writes to sample_output/)
 python -m qdep --input fixtures/sample_page.html --outdir sample_output
+```
 
 # Outputs
 
 ## Running the command above produces:
-sample_output/output.json  (valid items + errors list)
-sample_output/output.csv   (valid items only)
-sample_output/summary.txt  (counts + category breakdown + basic stats)
-sample_output/run.log      (start/end, paths, counts, brief validation errors)
+- `sample_output/output.json`  (valid items + errors list)
+- `sample_output/output.csv`   (valid items only)
+- `sample_output/summary.txt`  (counts + category breakdown + basic stats)
+- `sample_output/run.log`      (start/end, paths, counts, brief validation errors)
 
 # Why clients care
 - Deterministic, audit-friendly output: stable IDs, stable ordering, consistent formatting.
@@ -53,4 +54,6 @@ sample_output/run.log      (start/end, paths, counts, brief validation errors)
 4. sample_output/run.log showing start/end + brief validation errors.
 
 # Tests
+```bash
 python -m unittest discover -s tests -v
+```
